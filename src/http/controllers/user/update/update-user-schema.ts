@@ -4,7 +4,6 @@ export const updateUserSchema = {
   description: 'Update user',
   summary: 'Update user',
   tags: ['user'],
-  security: [{ bearerAuth: [] }],
   params: z.object({
     id: z.coerce.number(),
   }),

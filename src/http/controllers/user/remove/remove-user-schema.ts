@@ -4,7 +4,6 @@ export const removeUserSchema = {
   description: 'Remove user',
   summary: 'Remove user',
   tags: ['user'],
-  security: [{ bearerAuth: [] }],
   params: z.object({
     id: z.coerce.number(),
   }),

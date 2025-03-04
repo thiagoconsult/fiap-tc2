@@ -4,7 +4,6 @@ export const findByIdUserSchema = {
   description: 'Find by id user',
   summary: 'Find by id user',
   tags: ['user'],
-  security: [{ bearerAuth: [] }],
   params: z.object({
     id: z.coerce.number(),
   }),

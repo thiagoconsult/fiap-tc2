@@ -20,7 +20,6 @@ export const userRoutes = async (app: FastifyInstance) => {
       method: 'GET',
       url: '/user',
       schema: findAllUserSchema,
-      onRequest: jwtValidade,
       handler: findAll,
     });
 
@@ -28,7 +27,6 @@ export const userRoutes = async (app: FastifyInstance) => {
       method: 'GET',
       url: '/user/:id',
       schema: findByIdUserSchema,
-      onRequest: jwtValidade,
       handler: findById,
     });
 
@@ -36,7 +34,6 @@ export const userRoutes = async (app: FastifyInstance) => {
       method: 'PUT',
       url: '/user/:id',
       schema: updateUserSchema,
-      onRequest: jwtValidade,
       handler: update,
     });
 
@@ -44,7 +41,6 @@ export const userRoutes = async (app: FastifyInstance) => {
       method: 'DELETE',
       url: '/user/:id',
       schema: removeUserSchema,
-      onRequest: jwtValidade,
       handler: remove,
     });
 

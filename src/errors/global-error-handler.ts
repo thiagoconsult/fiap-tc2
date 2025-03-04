@@ -19,7 +19,7 @@ export const globalErrorHandler = async (
   }
 
   if (error instanceof DatabaseError) {
-    return res.status(400).send({ mesage: error.message });
+    return res.status(400).send({ mesage: error.detail });
   }
 
   if (error instanceof ResourceNotFound) {

@@ -4,7 +4,6 @@ export const findAllUserSchema = {
   description: 'Find all user',
   summary: 'Find all user',
   tags: ['user'],
-  security: [{ bearerAuth: [] }],
   querystring: z.object({
     page: z.coerce.number().default(1),
     limit: z.coerce.number().default(10),

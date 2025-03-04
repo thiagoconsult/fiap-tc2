@@ -17,6 +17,7 @@ import { rateLimitOptions } from './http/middlewares/rate-limit/rate-limit-optio
 import fastifyCors from '@fastify/cors';
 import { fastifyCorsOptions } from './http/middlewares/cors/cors-options';
 import { teacherRoutes } from './http/controllers/teacher/teacher-routes';
+import { postRoutes } from './http/controllers/post/post-routes';
 
 export const app = fastify();
 
@@ -33,3 +34,4 @@ app.register(fastifySwaggerUi, fastifySwaggerUiOptions);
 app.setErrorHandler(globalErrorHandler);
 app.register(userRoutes);
 app.register(teacherRoutes);
+app.register(postRoutes);
