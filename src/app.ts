@@ -16,12 +16,13 @@ import fastifyRateLimit from '@fastify/rate-limit';
 import { rateLimitOptions } from './http/middlewares/rate-limit/rate-limit-options';
 import fastifyCors from '@fastify/cors';
 import { fastifyCorsOptions } from './http/middlewares/cors/cors-options';
+import { teacherRoutes } from './http/controllers/teacher/teacher-routes';
 
 export const app = fastify();
 
 app.register(fastifyJwt, fastifyJWTOptions);
 app.register(fastifyHelmet);
-app.register(fastifyRateLimit, rateLimitOptions);
+// app.register(fastifyRateLimit, rateLimitOptions);
 app.register(fastifyCors, fastifyCorsOptions);
 
 app.setSerializerCompiler(serializerCompiler);
@@ -31,3 +32,4 @@ app.register(fastifySwaggerUi, fastifySwaggerUiOptions);
 
 app.setErrorHandler(globalErrorHandler);
 app.register(userRoutes);
+app.register(teacherRoutes);
